@@ -1,5 +1,6 @@
 package guilherme.tagtapnotes;
 
+import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
@@ -20,6 +21,8 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
+
+@SuppressLint({ "ParserError", "ParserError" })
 public class MainActivity extends AppCompatActivity {
 
     NfcAdapter adapter;

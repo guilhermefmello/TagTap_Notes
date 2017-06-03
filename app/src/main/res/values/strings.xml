@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">TagTap Notes</string>
+
+    <string name="error_detected">TAG NOT DETECTED!</string>
+    <string name="ok_writing">TAG HAS BEEN WRITTEN!</string>
+    <string name="error_writing">ERROR DURING WRITING! MAKE SURE THAT YOUR TAG IS CLOSE TO YOUR MOBILE PHONE.</string>
+    <string name="ok_detection">TAG DETECTED!</string>
+
+
 </resources>
