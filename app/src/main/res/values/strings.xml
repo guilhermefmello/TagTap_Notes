@@ -6,5 +6,8 @@
     <string name="error_writing">ERROR DURING WRITING! MAKE SURE THAT YOUR TAG IS CLOSE TO YOUR MOBILE PHONE.</string>
     <string name="ok_detection">TAG DETECTED!</string>
 
+    <string name="write_your_message">WRITE YOUR DAILY NOTES :</string>
+    <string name="message">Insert Message</string>
+    <string name="write">WRITE TAG</string>
 
 </resources>
