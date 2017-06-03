@@ -105,12 +105,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onNewIntent(Intent intent){
+        if(NfcAdapter.ACTION_TAG_DISCOVERED.equals(intent.getAction())){
+            mytag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+            Toast.makeText(this, this.getString(R.string.ok_detection) + mytag.toString(), Toast.LENGTH_LONG ).show();
+        }
+    }
 
+    @Override
+    public void onPause(){
+        super.onPause();
+        WriteModeOff();
+    }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        WriteModeOn();
+    }
 
+    private void WriteModeOn(){
+        writeMode = true;
+        adapter.enableForegroundDispatch(this, pendingIntent, writeTagFilters, null);
+    }
 
-
-
+    private void WriteModeOff(){
+        writeMode = false;
+        adapter.disableForegroundDispatch(this);
+    }
 
 
 
