@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.media.MediaPlayer;
 import android.nfc.FormatException;
 import android.nfc.NdefMessage;
 import android.nfc.NdefRecord;
@@ -39,12 +40,17 @@ public class MainActivity extends AppCompatActivity {
 
         ctx=this;
         Button btnWrite = (Button) findViewById(R.id.button);
+        // Adding Sound to the Button
+        final MediaPlayer myMediabtSinglePlayer = MediaPlayer.create(this, R.raw.button_sound1);
         final TextView message = (TextView)findViewById(R.id.edit_message);
 
         btnWrite.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
+
+                myMediabtSinglePlayer.start();
+
                 try {
                     if(mytag==null){
                         Toast.makeText(ctx, ctx.getString(R.string.error_detected), Toast.LENGTH_LONG ).show();
